@@ -54,12 +54,11 @@ body.default {
 .container {
     backdrop-filter: blur(20px) brightness(.5);
     padding: 2rem;
-    margin: 0;
+    margin: 2rem auto;
     box-shadow: 0 0 20px rgba(0,0,0,.5);
-    min-height: 100vh;
+    min-height: calc(100vh - 4rem);
     width: calc(100% - 4rem);
     max-width: 1200px;
-    margin: 0 auto;
     text-align: center;
     border-radius: 20px;
 }
