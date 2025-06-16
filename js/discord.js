@@ -1,4 +1,4 @@
-async function getPresence() {
+async function getDiscord() {
     try {
       const res = await fetch("https://api.astarri.space/user/193099922436784129"); // Use public URL if hosted
       const data = await res.json();
@@ -12,7 +12,7 @@ async function getPresence() {
       username.textContent = data.username;
 
       const displayname = document.getElementById("user-displayname");
-      displayname.textContent = `${data.display_name}`;
+      displayname.textContent = data.display_name;
   
       const icon = document.getElementsByClassName("status")[0];
   
@@ -34,5 +34,5 @@ async function getPresence() {
     }
   }
   
-  getPresence();
-  setInterval(getPresence, 60000); // Refresh every 30 sec
+  getDiscord();
+  setInterval(getDiscord, 60000); // Refresh every 30 sec
