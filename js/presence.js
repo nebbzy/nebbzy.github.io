@@ -10,6 +10,9 @@ async function getPresence() {
 
       const username = document.getElementById("user-name");
       username.textContent = data.username;
+
+      const displayname = document.getElementById("user-displayname");
+      displayname.textContent = `${data.username}#${data.discriminator}`;
   
       const icon = document.getElementsByClassName("status")[0];
   
