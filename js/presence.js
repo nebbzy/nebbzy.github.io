@@ -7,6 +7,9 @@ async function getPresence() {
       const avatar = document.getElementById("user-avatar");
       avatar.src = data.avatar_url;
       avatar.alt = `${data.username}#${data.discriminator}`;
+
+      const username = document.getElementById("user-name");
+      username.textContent = data.username;
   
       const icon = document.getElementsByClassName("status")[0];
   
