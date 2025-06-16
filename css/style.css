@@ -39,8 +39,11 @@ body {
     text-align: center;
     color: #fff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
     min-height: 100vh;
+    position: relative;
 }
 
 body.default {
@@ -56,11 +59,12 @@ body.default {
     padding: 2rem;
     margin: 2rem auto;
     box-shadow: 0 0 20px rgba(0,0,0,.5);
-    min-height: calc(100vh - 4rem);
+    height: fit-content;
     width: calc(100% - 4rem);
     max-width: 1200px;
     text-align: center;
     border-radius: 20px;
+    flex: 1;
 }
 
 .profile-section {
@@ -72,6 +76,10 @@ body.default {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.profile-section:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .profile-pic {
@@ -96,20 +104,11 @@ body.default {
     justify-content: center;
     gap: 0.5rem;
     margin: 0.5rem 0;
-    flex-wrap: wrap;
 }
 
 .name {
     font-size: 1.5rem;
     margin: 0;
-}
-
-.username {
-    font-size: 0.9rem;
-    margin: 0;
-    opacity: 0.8;
-    width: 100%;
-    font-weight: normal;
 }
 
 .status {
@@ -135,6 +134,10 @@ body.default {
     border-radius: 10px;
     margin-bottom: 1rem;
     backdrop-filter: blur(10px);
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .items {
@@ -180,5 +183,46 @@ body.default {
     width: calc(100% - 4rem);
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.side-container {
+    backdrop-filter: blur(20px) brightness(.5);
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    height: fit-content;
+    width: calc(100% - 4rem);
+    max-width: 400px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+@media (max-width: 1200px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .side-container {
+        margin: 2rem auto;
+        order: -1;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.footer:hover {
+    opacity: 1;
 }
 
